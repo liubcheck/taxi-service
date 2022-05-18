@@ -1,9 +1,6 @@
 # taxi-service
-### Project description:
----
-A simple web-application that supports authentication and other CRUD operations.
----
-
+Web application with basic UI interface which simulates taxi service work. 
+It allows you to create cars, manufacturers, drivers and attach drivers to the cars.
 ## Features
 - registration like a driver;
 - authentication like a driver;
@@ -15,6 +12,10 @@ A simple web-application that supports authentication and other CRUD operations.
 - display list of all drivers;
 - display list of all cars by current driver;
 - add driver to car.
+You can access all of them from the main /index page
+after registering as a new driver at /drivers/add page
+and signing in at /drivers/login page (you will be redirected to this page if you try to access pages which are not allowed for unsigned drivers).
+After that you will have access to all the pages and their functions.
 ## Project structure (3-layer architecture):
 - DAO - Data access layer
 - Service - Application logic layer
@@ -32,3 +33,12 @@ A simple web-application that supports authentication and other CRUD operations.
 - HTML/CSS
 - Checkstyle plugin
 - Project Lombok
+## How to run:
+1) It is compulsory to use TomCat and MySQL, otherwise it won't work
+2) Add a TomCat local configuration:
+  - TomCat server - local
+  - Deployment - war exploded
+  - Application context - /
+3) Run SQL script in src/main/resources/init_db.sql to set up database
+4) Configure src/main/java/taxi/util/ConnectionUtil.java with your URL, USERNAME, PASSWORD and JDBC_DRIVER
+5) Import Maven dependency from pom.xml
