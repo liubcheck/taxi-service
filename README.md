@@ -2,8 +2,8 @@
 Web application with basic UI interface which simulates taxi service work. 
 It allows you to create cars, manufacturers, drivers and attach drivers to the cars.
 ## Features
-- registration like a driver;
-- authentication like a driver;
+- driver registration;
+- driver authentication;
 - create/update/remove a manufacturer;
 - create/update/remove a car;
 - create/update/remove a driver;
@@ -21,7 +21,7 @@ After that you will have access to all the pages and their functions.
 - DAO - Data access layer
 - Service - Application logic layer
 - Controllers - Presentation layer
-## Used technologies and libraries:
+## Technologies:
 - Java 15
 - Git
 - Apache Maven
